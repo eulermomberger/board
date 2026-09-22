@@ -54,7 +54,7 @@ function SectionContent({ className, ...props }: SectionContentProps) {
   return (
     <div
       className={twMerge(
-        "flex flex-col gap-2.5 overflow-y-scroll p-3",
+        "flex flex-col gap-2.5 overflow-y-auto p-3",
         className,
       )}
       {...props}
