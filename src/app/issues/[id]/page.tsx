@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/button";
 import { getIssue } from "@/http/get-issue";
-import { IssueCommentsList } from "./issue-comments/issue-coments-list";
+import { IssueCommentsList } from "./issue-comments/issue-comments-list";
 
 interface IssuePageProps {
   params: Promise<{ id: string }>;
