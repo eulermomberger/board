@@ -12,8 +12,6 @@ export async function listIssues({ search }: ListIssuesParams = {}) {
     url.searchParams.set("search", search);
   }
 
-  console.log("Fetching issues from:", url.toString());
-
   const response = await fetch(url);
   const data = await response.json();
 
