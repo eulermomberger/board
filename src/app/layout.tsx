@@ -16,14 +16,19 @@ const interFont = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
+  drawer,
 }: Readonly<{
   children: React.ReactNode;
+  drawer: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={interFont.className}>
       <body className="bg-navy-950 text-navy-50 antialiased">
         <ReactQueryProvider>
-          <NuqsAdapter>{children}</NuqsAdapter>
+          <NuqsAdapter>
+            {children}
+            {drawer}
+          </NuqsAdapter>
         </ReactQueryProvider>
       </body>
     </html>
