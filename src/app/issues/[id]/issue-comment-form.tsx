@@ -25,12 +25,15 @@ export function IssueCommentForm({
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    reset,
   } = useForm<CreateCommentSchema>({
     resolver: zodResolver(createCommentSchema),
   });
 
   async function handleCreateComment(data: CreateCommentSchema) {
     await onCreateComment(data.text);
+
+    reset();
   }
 
   return (
